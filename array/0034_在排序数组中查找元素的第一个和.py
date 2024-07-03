@@ -14,6 +14,7 @@ class Solution:
 
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         l, r = 0, len(nums) - 1
+        # 找到左边界
         while l <= r:
             mid = (l + r) // 2
             # num[mid]大于等于target时，缩小右边界
