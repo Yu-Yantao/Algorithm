@@ -21,6 +21,7 @@ class Solution:
                 r = mid - 1
             else:
                 l = mid + 1
+        # 未找到target，返回[-1,-1]
         if l >= len(nums) or nums[l] != target:
             return [-1, -1]
         # 从左边界开始向右找
