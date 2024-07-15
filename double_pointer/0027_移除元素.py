@@ -28,7 +28,7 @@ class Solution:
         if len(nums) <= 1:
             return 1
         slow, fast = 0, 0
-        while fast < len(nums) - 1:
+        while fast < len(nums):
             if nums[fast] == val:
                 fast += 1
             else:
