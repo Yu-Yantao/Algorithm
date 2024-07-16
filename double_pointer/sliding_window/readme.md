@@ -9,7 +9,7 @@
 ```python
 for left in range(len(nums)):
     for right in range(left, len(nums)):
-# nums[left, right] 是一个子数组
+        # nums[left, right] 是一个子数组
 
 ```
 
