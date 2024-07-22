@@ -9,7 +9,7 @@
 ```python
 for left in range(len(nums)):
     for right in range(left, len(nums)):
-        # nums[left, right] 是一个子数组
+# nums[left, right] 是一个子数组
 
 ```
 
@@ -41,4 +41,8 @@ while right < len(nums):
 > 需要注意的是，滑动窗口并**不能枚举**所有的子数组/子串，但是，它却可以枚举**所有满足某种条件**的子数组/子串。
 
 ## 2 有意思的题目
+
 - 76.最小覆盖子串
+
+## 3.总结
+- 当窗口大小固定时，可以省去某一边边界的处理，例如在**子数组最大平均数 I**中，窗口大小为K，可以枚举右边界，左边界为right - K。
