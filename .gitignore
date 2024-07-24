@@ -1,3 +1,5 @@
+# 忽略demo文件
+/learning
 # 忽略VSCode生成的文件
 .vscode/
 # 忽略IDEA产生的文件
