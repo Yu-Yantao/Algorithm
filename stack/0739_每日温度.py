@@ -41,6 +41,23 @@ class Solution:
             stack.append(i)
         return ans
 
+    def dailyTemperaturesLR(self, temperatures: List[int]) -> List[int]:
+        """
+        从左向右的解法，栈中保存的是还未找到下一个大于自身的元素，所以也是需要维护一个单调递减的栈，当新元素大于栈顶时，逐个出栈
+        :param temperatures:
+        :return:
+        """
+        stack = []
+        n = len(temperatures)
+        ans = [0] * n
+        for i in range(n):
+            t = temperatures[i]
+            while stack and t > temperatures[stack[-1]]:
+                ans[stack[-1]] = i - stack[-1]
+                stack.pop()
+            stack.append(i)
+        return ans
+
 
 if __name__ == '__main__':
     print(Solution().dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]))
