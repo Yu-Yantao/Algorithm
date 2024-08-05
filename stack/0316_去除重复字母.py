@@ -27,16 +27,18 @@ class Solution:
             count[ord(i) - ord('a')] += 1
         stack = []
         for i in s:
-            if i not in stack:
-                while stack and stack[-1] > i and count[ord(stack[-1]) - ord('a')] > 0:
-                    stack.pop()
-                stack.append(i)
+            if i in stack:
+                count[ord(i) - ord('a')] -= 1
+                continue
+            while stack and stack[-1] > i and count[ord(stack[-1]) - ord('a')] > 0:
+                stack.pop()
+            stack.append(i)
             count[ord(i) - ord('a')] -= 1
         return ''.join(stack)
 
 
 if __name__ == '__main__':
-    # print(Solution().removeDuplicateLetters('bcabc'))
-    # print(Solution().removeDuplicateLetters('cbacdcbc'))
-    # print(Solution().removeDuplicateLetters('cdadabcc'))
+    print(Solution().removeDuplicateLetters('bcabc'))
+    print(Solution().removeDuplicateLetters('cbacdcbc'))
+    print(Solution().removeDuplicateLetters('cdadabcc'))
     print(Solution().removeDuplicateLetters('bbcaac'))
