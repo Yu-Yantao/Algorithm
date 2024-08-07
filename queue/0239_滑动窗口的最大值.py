@@ -1,4 +1,3 @@
-import queue
 import heapq
 from typing import List
 
